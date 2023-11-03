@@ -138,7 +138,6 @@ export default makeScene2D(function* (view) {
             </Layout>
         </>,
     );
-
     yield* usmap().end(1,1);
     yield circleAlabama().fill('#fff');
     yield circleFlorida().fill('#008000');
