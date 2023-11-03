@@ -1,10 +1,18 @@
-import {defineConfig} from 'vite';
-import motionCanvas from '@motion-canvas/vite-plugin';
-import ffmpeg from '@motion-canvas/ffmpeg';
+import { defineConfig } from "vite";
+import motionCanvas from "@motion-canvas/vite-plugin";
+import ffmpeg from "@motion-canvas/ffmpeg";
 
 export default defineConfig({
-  plugins: [
-    motionCanvas(),
-    ffmpeg(),
-  ],
+  plugins: [motionCanvas(), ffmpeg()],
+  build: {
+    rollupOptions: {
+      input: {
+        web: "index.html",
+      },
+      output: {
+        dir: "dist/",
+        entryFileNames: "[name].js",
+      },
+    },
+  },
 });
