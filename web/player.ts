@@ -14,8 +14,9 @@ import "@motion-canvas/player";
     if (url?.startsWith("/")) {
       url = base + url.slice(1);
       const newElement = document.createElement("motion-canvas-player");
-      newElement.setAttribute("auto", player.getAttribute("auto") ?? "false");
+      newElement.setAttribute("auto", player.getAttribute("auto") ?? "lse");
       newElement.setAttribute("src", url);
+      newElement.setAttribute("toggleLoop", "false");
       player.replaceWith(newElement);
     }
   });
