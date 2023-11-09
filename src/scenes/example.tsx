@@ -139,14 +139,17 @@ export default makeScene2D(function* (view) {
             </Layout>
         </>,
     );
-    yield* usmap().end(1,1);
-    yield circleAlabama().fill('#fff');
-    yield circleFlorida().fill('#008000');
-    yield circleHawaii().fill('#40e0d0');
-    yield circleMaine().fill('#01796f');
-    yield circleTexas().fill('#cc5500');
-    yield circleNevada().fill('#c0c0c0');
-    yield circleOregon().fill('#ffa500');
-    yield circleWashington().fill('#67009e');
-    yield* loop(1, i => null);
+    yield* all(
+        usmap().end(1,1),
+    );
+    yield all(
+        circleAlabama().fill('#fff'),
+        circleFlorida().fill('#008000'),
+        circleHawaii().fill('#40e0d0'),
+        circleMaine().fill('#01796f'),
+        circleTexas().fill('#cc5500'),
+        circleNevada().fill('#c0c0c0'),
+        circleOregon().fill('#ffa500'),
+        circleWashington().fill('#67009e'),
+    );
 });
