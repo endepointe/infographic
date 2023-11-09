@@ -150,4 +150,5 @@ export default makeScene2D(function* (view) {
     yield circleNevada().fill('#c0c0c0');
     yield circleOregon().fill('#ffa500');
     yield circleWashington().fill('#67009e');
+
 });
