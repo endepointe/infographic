@@ -8,6 +8,7 @@ import "@motion-canvas/player";
   }
   document.querySelectorAll("motion-canvas-player").forEach((player) => {
     let url = player.getAttribute("src");
+    console.log(url);
     if (url?.startsWith("/")) {
       url = base + url.slice(1);
       const newElement = document.createElement("motion-canvas-player");
