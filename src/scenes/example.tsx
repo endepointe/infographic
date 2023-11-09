@@ -3,12 +3,14 @@ import {linear} from '@motion-canvas/core/lib/tweening';
 import {waitUntil} from '@motion-canvas/core/lib/flow';
 import {slideTransition} from '@motion-canvas/core/lib/transitions';
 import {makeRef, useScene} from '@motion-canvas/core/lib/utils';
-import {all, createRef, waitFor} from '@motion-canvas/core';
+import {all, createRef, waitFor, Player} from '@motion-canvas/core';
+import * as CORE from '@motion-canvas/core'; 
 import {map} from '@motion-canvas/core/lib/tweening';
 import {Vector2, Spacing} from '@motion-canvas/core/lib/types';
 import {path_data} from '../usmap.js';
 import '@motion-canvas/player';
 
+console.log(Player);
 
 const RED = '#ff6470';
 const GREEN = '#99C47A';

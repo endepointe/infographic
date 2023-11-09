@@ -14,6 +14,7 @@ import "@motion-canvas/player";
       newElement.setAttribute("auto", player.getAttribute("auto") ?? "true");
       newElement.setAttribute("src", url);
       player.replaceWith(newElement);
+      player.toggleLoop();
     }
   });
 })();
