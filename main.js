@@ -1,4 +1,6 @@
 
+// read file data - doubtful that this will be needed but who knows
+/*
 const [file] = document.querySelector("input[type=file]").files;
 const reader = new FileReader();
 reader.addEventListener(
@@ -12,9 +14,13 @@ reader.addEventListener(
 if (file) {
     reader.readAsText(file);
 }
+*/
 
 // Get the path element
 const path = document.getElementById('myPath');
+document.querySelector("svg").setAttribute("width", 2000);
+console.log(document.querySelector("svg").getAttribute("width"));
+
 
 // Get the total length of the path
 const pathLength = path.getTotalLength();
@@ -22,12 +28,15 @@ const pathLength = path.getTotalLength();
 // Set the stroke-dasharray and stroke-dashoffset initially
 path.style.strokeDasharray = pathLength;
 path.style.strokeDashoffset = pathLength;
+path.style.fill = "none";
 
 // Animate the drawing using JavaScript
 function drawPath() {
-  path.style.transition = 'stroke-dashoffset 2s ease-in-out';
-  path.style.strokeDashoffset = 0;
+    path.style.transition = 'stroke-dashoffset 2s ease-in-out';
+    path.style.strokeDashoffset = 0;
+    //path.style.fill = "#123fff";
 }
+
 
 // Call the drawPath function after a delay (e.g., 1 second)
 setTimeout(drawPath, 1000);
